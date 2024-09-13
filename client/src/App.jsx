@@ -11,11 +11,13 @@ function App() {
   return (
     <>
       {/* header */}
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/generateimage" element={<GenerateImage />} />
       </Routes>
       {/* footer */}
+      <Footer />
     </>
   );
 }
