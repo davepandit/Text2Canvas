@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsStars } from "react-icons/bs"; //for the generate button
 import { IoSearchOutline } from "react-icons/io5";
-import { PiLightbulbFilamentThin } from "react-icons/pi";
+import { FaRegLightbulb } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { GiHamburger } from "react-icons/gi";
@@ -11,7 +11,7 @@ const Header = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className="hidden xl:flex items-center justify-around mt-5">
+      <div className="hidden xl:flex items-center justify-around py-5 fixed top-0 left-0 w-full z-50 bg-customBlue">
         {/* left part */}
         <div className="flex items-center gap-11">
           <div className="font-bold text-2xl hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
@@ -26,7 +26,7 @@ const Header = () => {
             Explore
           </div>
           <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
-            <PiLightbulbFilamentThin />
+            <FaRegLightbulb />
             Products
           </div>
         </div>
@@ -58,10 +58,10 @@ const Header = () => {
         </div>
       </div>
       {/* this is for the smaller screens */}
-      <div className="xl:hidden flex items-center justify-evenly mt-5">
+      <div className="xl:hidden flex items-center justify-evenly py-5">
         <GiHamburger className="text-2xl" onClick={() => setShowModal(true)} />
         <div className="text-xl font-bold">Text2Canvas</div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4">
           {/* my twitter link and all */}
           <a
             href="https://github.com/davepandit/Text2Canvas"
@@ -139,7 +139,7 @@ const Header = () => {
             </div>
             <hr class="border-t-2 border-gray-300 " />
             <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out text-black">
-              <PiLightbulbFilamentThin />
+              <FaRegLightbulb />
               Products
             </div>
             <hr class="border-t-2 border-gray-300 " />

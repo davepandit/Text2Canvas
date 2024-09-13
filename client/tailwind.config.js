@@ -9,6 +9,9 @@ export default {
       colors: {
         customBlue: "#040B35",
         customButton: "#654FF0",
+        customButton2: "#1977F2",
+        customBG: "#F0F3F8",
+        customFooter: "#FFFFFF",
       },
     },
   },
