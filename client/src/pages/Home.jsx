@@ -5,6 +5,7 @@ import image1 from "../assets/image1.png";
 import image3 from "../assets/image3.png";
 import image5 from "../assets/image5.png";
 import image6 from "../assets/image6.png";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -102,6 +103,7 @@ const Home = () => {
           className="w-[300px] h-[378px] md:w-[500px] md:h-[631px]"
         />
       </div>
+      <Footer />
     </>
   );
 };

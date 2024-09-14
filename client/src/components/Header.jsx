@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { GiHamburger } from "react-icons/gi";
 import { IoIosHelpCircleOutline } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -14,27 +15,37 @@ const Header = () => {
       <div className="hidden xl:flex items-center justify-around py-5 fixed top-0 left-0 w-full z-50 bg-customBlue">
         {/* left part */}
         <div className="flex items-center gap-11">
-          <div className="font-bold text-2xl hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
-            Text2Canvas
-          </div>
-          <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
-            <BsStars />
-            Generate
-          </div>
-          <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
-            <IoSearchOutline />
-            Explore
-          </div>
-          <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
-            <FaRegLightbulb />
-            Products
-          </div>
+          <Link to="/">
+            <div className="font-bold text-2xl hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
+              Text2Canvas
+            </div>
+          </Link>
+          <Link to="/generateimage">
+            <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
+              <BsStars />
+              Generate
+            </div>
+          </Link>
+          <Link to="/explore">
+            <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
+              <IoSearchOutline />
+              Explore
+            </div>
+          </Link>
+          <Link to="/products">
+            <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
+              <FaRegLightbulb />
+              Products
+            </div>
+          </Link>
         </div>
         {/* right part  */}
         <div className="flex items-center gap-4">
-          <button className="bg-customButton rounded-3xl px-5 py-[5px] hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
-            Login
-          </button>
+          <Link to="/login">
+            <button className="bg-customButton rounded-3xl px-5 py-[5px] hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
+              Login
+            </button>
+          </Link>
           {/* my twitter link and all */}
           <a
             href="https://github.com/davepandit/Text2Canvas"
@@ -128,25 +139,33 @@ const Header = () => {
           </div>
           <div className="flex flex-col gap-5 mt-5">
             <hr class="border-t-2 border-gray-300 " />
-            <div className="text-lg text-black flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
-              <BsStars />
-              Generate
-            </div>
+            <Link to="/generateimage">
+              <div className="text-lg text-black flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out">
+                <BsStars />
+                Generate
+              </div>
+            </Link>
             <hr class="border-t-2 border-gray-300 " />
-            <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out text-black">
-              <IoSearchOutline />
-              Explore
-            </div>
+            <Link to="/explore">
+              <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out text-black">
+                <IoSearchOutline />
+                Explore
+              </div>
+            </Link>
             <hr class="border-t-2 border-gray-300 " />
-            <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out text-black">
-              <FaRegLightbulb />
-              Products
-            </div>
+            <Link to="/products">
+              <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out text-black">
+                <FaRegLightbulb />
+                Products
+              </div>
+            </Link>
             <hr class="border-t-2 border-gray-300 " />
-            <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out text-black">
-              <IoIosHelpCircleOutline />
-              Help
-            </div>
+            <Link to="/help">
+              <div className="text-lg flex gap-1 items-center hover:cursor-pointer hover:opacity-60 duration-300 ease-in-out text-black">
+                <IoIosHelpCircleOutline />
+                Help
+              </div>
+            </Link>
             <hr class="border-t-2 border-gray-300 " />
           </div>
         </div>
